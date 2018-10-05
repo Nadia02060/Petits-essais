@@ -1,0 +1,31 @@
+<html>
+<head>
+<title>Binaire</title>
+<meta charset="utf-8"/>
+<script type="text/javascript">
+
+function main() {
+   var a = 214
+   var b = "";
+   while (a != 0)  {
+		if (a % 2 == 0)	{
+			b = "0"+ b;
+		} else {
+			a = a - 1;
+			b = "1" + b;
+		}
+		a = a / 2;
+	}
+	console.log(b) ;
+}
+
+
+
+</script>
+</head>
+<body onload="main()">
+
+<h1>Conversion en binaire</h1>
+
+</body>
+</html>
