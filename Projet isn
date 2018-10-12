@@ -1,31 +1,37 @@
 <html>
 <head>
-<title>Binaire</title>
+<title>Graph</title>
 <meta charset="utf-8"/>
 <script type="text/javascript">
 
 function main() {
-   var a = 214
-   var b = "";
-   while (a != 0)  {
-		if (a % 2 == 0)	{
-			b = "0"+ b;
-		} else {
-			a = a - 1;
-			b = "1" + b;
-		}
-		a = a / 2;
-	}
-	console.log(b) ;
-}
-
+   var xmin = -10;
+   var xmax = 10;
+   var xgrad = 1;
+   var ymin = -10;
+   var ymax = 10;
+   var ygrad = 1;
+   var plot = document.getElementById("curve"); 
+   var pen = plot.getContext("2d");
+   var y0 = plot.height*(-ymax)/(ymin-ymax)
+   var x0 = plot.width* (-xmin)/(xmax-xmin)
+   var ymax = plot.height*(-ymax)/(ymin-ymax)
+   var xmax = plot.width* (-xmin)/(xmax-xmin)
+   pen.beginPath();
+   pen.moveTo(0,y0);
+   pen.lineTo(plot.width,y0);
+   pen.stroke();
+ }  
+   
 
 
 </script>
 </head>
 <body onload="main()">
 
-<h1>Conversion en binaire</h1>
+<h1>Graph</h1>
+
+<canvas id="curve" width="800" height="450" style="background: yellow"/>
 
 </body>
 </html>
