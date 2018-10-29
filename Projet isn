@@ -13,14 +13,22 @@ function main() {
    var ygrad = 1;
    var plot = document.getElementById("curve"); 
    var pen = plot.getContext("2d");
-   var y0 = plot.height*(-ymax)/(ymin-ymax)
-   var x0 = plot.width* (-xmin)/(xmax-xmin)
+   var x0 = plot.height*(-xmin)/(xmax-xmin)
+   var y0 = plot.width* (-ymax)/(ymin-ymax)
    pen.beginPath();
-   pen.moveTo(0,y0);
-   pen.lineTo(plot.width,y0);
-   pen.moveTo(0,x0);
+   pen.moveTo(450,10);
+   pen.lineTo(plot.height,y0);
+   pen.moveTo(-50000,-10);
    pen.lineTo(plot.width,x0);
    pen.stroke();
+   xgrad*Math.floor (xmax/xgrad)
+   xgrad*Math.Ceil  (xmax/xgrad)
+   while  (x<x1)
+   xe=
+   moveTo ()
+   lineTo (0)
+   stroke()
+   x=x+xgrad
  }  
    
 
